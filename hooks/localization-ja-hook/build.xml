@@ -37,10 +37,6 @@
 				dir="${app.server.portal.dir}"
 				includes="html/portlet/users_admin/user/details.jsp"
 			/>
-			<fileset
-				dir="${app.server.portal.dir}"
-				includes="html/portlet/users_admin/user/search_columns.jspf"
-			/>
 		</copy>
 
 		<antcall target="build-common-plugin.compile" />
