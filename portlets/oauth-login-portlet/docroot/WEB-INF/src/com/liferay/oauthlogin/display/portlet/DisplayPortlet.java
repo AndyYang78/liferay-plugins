@@ -102,10 +102,12 @@ public class DisplayPortlet extends MVCPortlet {
 			session.setAttribute("requestToken", requestToken);
 		}
 		else {
-			authorizeURL = authorizeURL +
+			authorizeURL =
+				authorizeURL +
 				"?client_id=%s&redirect_uri=%s&response_type=code";
 
-			accessTokenURL = oAuthConnection.getAccessTokenURL() +
+			accessTokenURL =
+				oAuthConnection.getAccessTokenURL() +
 				"?grant_type=authorization_code";
 
 			if (Validator.isNotNull(oAuthConnection.getScope())) {
